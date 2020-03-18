@@ -11,9 +11,8 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1
         style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
+          ...scale(0.5),
+          margin: 0,
         }}
       >
         <Link
@@ -52,20 +51,28 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        padding: "20px",
+        color: "white",
+        backgroundColor: "#0f4c75",
       }}
     >
       <header>{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
     </div>
+    // <div
+    //   style={{
+    //     marginLeft: `auto`,
+    //     marginRight: `auto`,
+    //     maxWidth: rhythm(24),
+    //     padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+    //   }}
+    // >
+    //   <header>{header}</header>
+    //   <main>{children}</main>
+    //   <footer>
+    //     <a href="https://github.com/napatwongchr">Github</a>{" "}
+    //     <a href="https://twitter.com/knotnapat_">Twitter</a>
+    //   </footer>
+    // </div>
   )
 }
 
