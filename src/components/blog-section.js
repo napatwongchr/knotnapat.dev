@@ -18,15 +18,13 @@ const posts = [
 
 const BlogSection = () => {
   return (
-    <Flex width="50%" position="relative" bg="khali">
+    <Flex width="40%" bg="khali" mb="30px">
       <Flex
         flexDirection="column"
         p="25px"
-        width="120%"
+        width="100%"
         bg="white"
         borderRadius="10px"
-        position="absolute"
-        top="-30px"
       >
         <Text fontSize="25px" fontWeight="bold" mb="20px">
           Blog

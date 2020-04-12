@@ -20,12 +20,7 @@ const BlogIndex = ({ data, location }) => {
         `}
       />
       <CSSReset />
-      <Flex
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        h="100%"
-      >
+      <Flex flexDirection="column" alignItems="center" justifyContent="center">
         <HeaderSection />
         <BlogSection />
       </Flex>

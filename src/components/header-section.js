@@ -18,6 +18,7 @@ const HeaderSection = () => {
       width="100%"
       bg="khaki"
       minHeight="300px"
+      mb="30px"
     >
       <Text fontSize="2rem" my="30px" fontWeight="bold">
         KNOTNAPAT.DEV
