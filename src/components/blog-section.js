@@ -1,13 +1,6 @@
 import React from "react"
 
-import {
-  ThemeProvider,
-  Text,
-  Flex,
-  CSSReset,
-  Stack,
-  PseudoBox,
-} from "@chakra-ui/core"
+import { Text, Flex, Stack } from "@chakra-ui/core"
 
 const posts = [
   { title: "Blog post #1", description: "Post description" },

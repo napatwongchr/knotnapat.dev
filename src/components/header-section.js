@@ -1,10 +1,10 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import { Text, Flex, Stack, PseudoBox } from "@chakra-ui/core"
 
 const menus = [
   { name: "Blog" },
-  { name: "Portfolio" },
+  { name: "Portfolio", uri: "portfolio" },
   { name: "My Notebooks" },
   { name: "Videos" },
   { name: "About Me" },
@@ -16,14 +16,14 @@ const HeaderSection = () => {
       flexDirection="column"
       alignItems="center"
       width="100%"
+      height="100%"
       bg="khaki"
-      minHeight="300px"
-      mb="30px"
+      pt="200px"
     >
-      <Text fontSize="2rem" my="30px" fontWeight="bold">
+      <Text fontSize="5rem" my="30px" fontWeight="bold">
         KNOTNAPAT.DEV
       </Text>
-      <Text mb="30px" w="50%" textAlign="center" fontSize="20px">
+      <Text mb="30px" w="50%" textAlign="center" fontSize="1.5rem">
         Hi, I'm Knot Napat, Full stack JavaScript developer. I passionate in
         building reasonable software and codebase.
       </Text>
@@ -40,7 +40,9 @@ const HeaderSection = () => {
                 borderWidth: "0 0 5px 0",
               }}
             >
-              {menu.name}
+              <Link to={menu.uri} style={{ boxShadow: "none" }}>
+                {menu.name}
+              </Link>
             </PseudoBox>
           )
         })}

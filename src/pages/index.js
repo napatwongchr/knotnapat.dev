@@ -1,11 +1,10 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import { Global, css } from "@emotion/core"
 import { ThemeProvider, Flex, CSSReset } from "@chakra-ui/core"
 
 import HeaderSection from "../components/header-section"
-import BlogSection from "../components/blog-section"
 
 import customTheme from "../utils/theme"
 
@@ -20,44 +19,16 @@ const BlogIndex = ({ data, location }) => {
         `}
       />
       <CSSReset />
-      <Flex flexDirection="column" alignItems="center" justifyContent="center">
+      <Flex
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        height="100vh"
+      >
         <HeaderSection />
-        <BlogSection />
       </Flex>
     </ThemeProvider>
   )
-  // return (
-  //   <Layout location={location} title={siteTitle}>
-  //     <SEO title="All posts" />
-  //     {/* <Bio />
-  //     {posts.map(({ node }) => {
-  //       const title = node.frontmatter.title || node.fields.slug
-  //       return (
-  //         <article key={node.fields.slug}>
-  //           <header>
-  //             <h3
-  //               style={{
-  //                 marginBottom: rhythm(1 / 4),
-  //               }}
-  //             >
-  //               <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-  //                 {title}
-  //               </Link>
-  //             </h3>
-  //             <small>{node.frontmatter.date}</small>
-  //           </header>
-  //           <section>
-  //             <p
-  //               dangerouslySetInnerHTML={{
-  //                 __html: node.frontmatter.description || node.excerpt,
-  //               }}
-  //             />
-  //           </section>
-  //         </article>
-  //       )
-  //     })} */}
-  //   </Layout>
-  // )
 }
 
 export default BlogIndex
