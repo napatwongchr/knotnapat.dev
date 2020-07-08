@@ -1,55 +1,72 @@
 import React from "react"
 
-import { Text, Flex, Stack } from "@chakra-ui/core"
+import { Box, Text, Flex, Grid, Icon, Image } from "@chakra-ui/core"
 
 const posts = [
-  { title: "Blog post #1", description: "Post description" },
-  { title: "Blog post #2", description: "Post description" },
-  { title: "Blog post #3", description: "Post description" },
-  { title: "Blog post #4", description: "Post description" },
+  {
+    title: "Blog post #1",
+    cover: "https://via.placeholder.com/350x200",
+    description:
+      "Post description aasdfasdfaasd fasdfaasdfasdfaasdfa sdfaasdfasd faasdfasdf",
+  },
+  {
+    title: "Blog post #2",
+    cover: "https://via.placeholder.com/350x200",
+    description: "Post description",
+  },
+  {
+    title: "Blog post #3",
+    cover: "https://via.placeholder.com/350x200",
+    description: "Post description",
+  },
+  {
+    title: "Blog post #4",
+    cover: "https://via.placeholder.com/350x200",
+    description: "Post description",
+  },
 ]
 
 const BlogSection = () => {
   return (
-    <Flex width="40%" bg="khali" mb="30px">
-      <Flex
-        flexDirection="column"
-        p="25px"
-        width="100%"
-        bg="white"
-        borderRadius="10px"
-      >
-        <Text fontSize="25px" fontWeight="bold" mb="20px">
-          Blog
-        </Text>
-        <Stack spacing="15px" mb="30px">
-          {posts.map(post => {
-            return (
+    <Flex flexDirection="column" p="25px" width="100%" borderRadius="10px">
+      <Text fontSize="30px" fontWeight="bold" mb="20px">
+        KNOTNAPAT.DEV's Blog
+      </Text>
+      <Grid templateColumns="repeat(3, 1fr)" gap="5">
+        {posts.map(post => {
+          return (
+            <Flex
+              bg="#ffffff"
+              borderRadius="10px"
+              direction="column"
+              align="center"
+              cursor="pointer"
+              position="relative"
+            >
+              <Text fontWeight="bold" fontSize="25px" pt="20px">
+                {post.title}
+              </Text>
+              <Image src={post.cover} />
+              <Text fontWeight="bold" fontSize="20px" p="0 15px 15px 15px">
+                {post.description}
+              </Text>
               <Flex
-                bg="khaki"
-                p="20px"
-                justifyContent="space-between"
-                alignItems="center"
+                position="absolute"
+                bottom="-10px"
+                right="-10px"
+                w="50px"
+                h="50px"
+                justify="center"
+                align="center"
+                borderRadius="100%"
+                bg="brand.700"
               >
-                <Flex flexDirection="column">
-                  <Text fontWeight="bold" fontSize="20px">
-                    {post.title}
-                  </Text>
-                  <Text fontSize="20px">{post.description}</Text>
-                </Flex>
-                <Text fontWeight="bold" fontSize="20px" cursor="pointer">
-                  Read more
-                </Text>
+                <Icon name="copy" color="#ffffff" />
               </Flex>
-            )
-          })}
-        </Stack>
-        <Flex justifyContent="center">
-          <Text fontSize="25px" fontWeight="bold" mb="20px">
-            View all posts
-          </Text>
-        </Flex>
-      </Flex>
+            </Flex>
+          )
+        })}
+      </Grid>
     </Flex>
   )
 }

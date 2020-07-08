@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import { Text, Flex, Stack, PseudoBox } from "@chakra-ui/core"
 
 const menus = [
-  { name: "Blog" },
-  { name: "Portfolio", uri: "portfolio" },
+  { name: "Blog", uri: "blog" },
+  { name: "Portfolio" },
   { name: "My Notebooks" },
   { name: "Videos" },
   { name: "About Me" },
